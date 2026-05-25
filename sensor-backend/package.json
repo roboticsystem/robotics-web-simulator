@@ -1,0 +1,22 @@
+{
+  "name": "robot-sensor-sim-backend",
+  "version": "1.0.0",
+  "description": "WebSocket sensor simulation server",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test test/accuracy.test.js test/geometry.test.js test/sensor-models.test.js test/validation.safe.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "robot-script-studio": "file:..",
+    "ws": "^8.18.0"
+  }
+}

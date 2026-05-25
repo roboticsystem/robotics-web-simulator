@@ -1,0 +1,28 @@
+{
+  "name": "robot-script-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:frontend": "vite",
+    "dev:backend": "npm --prefix sensor-backend run dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:picoc": "powershell -ExecutionPolicy Bypass -File ./scripts/build-picoc.ps1",
+    "backend:install": "npm --prefix sensor-backend install",
+    "backend:start": "npm --prefix sensor-backend start",
+    "backend:test": "npm --prefix sensor-backend test"
+  },
+  "dependencies": {
+    "echarts": "^5.6.0",
+    "monaco-editor": "^0.52.2",
+    "pinia": "^2.3.1",
+    "three": "^0.179.1",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "vite": "^5.4.19"
+  }
+}
