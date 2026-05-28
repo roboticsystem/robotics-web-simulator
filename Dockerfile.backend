@@ -1,0 +1,16 @@
+FROM node:20-alpine
+WORKDIR /app
+
+COPY package*.json ./
+COPY sensor-backend/package*.json ./sensor-backend/
+
+RUN npm ci
+RUN npm --prefix sensor-backend ci
+
+COPY . .
+
+ENV NODE_ENV=production
+ENV PORT=3001
+
+EXPOSE 3001
+CMD ["npm", "run", "backend:start"]
